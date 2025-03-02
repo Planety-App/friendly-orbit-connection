@@ -121,7 +121,7 @@ const Features = () => {
                     {activeIndex === 0 && (
                       <div className="animate-scale-in h-full flex flex-col">
                         <div className="text-center mb-6">
-                          <h5 className="text-lg font-bold">Friend Planets</h5>
+                          <h5 className="text-lg font-bold p-2">Friend Planets</h5>
                           <p className="text-sm text-foreground/70">Discover where your friends orbit</p>
                         </div>
                         <div className="flex-1 grid grid-cols-2 gap-4">
@@ -145,7 +145,7 @@ const Features = () => {
                     {activeIndex === 1 && (
                       <div className="animate-scale-in h-full flex flex-col">
                         <div className="text-center mb-6">
-                          <h5 className="text-lg font-bold">Today's Missions</h5>
+                          <h5 className="text-lg font-bold p-2">Today's Missions</h5>
                           <p className="text-sm text-foreground/70">Simple ways to connect</p>
                         </div>
                         <div className="space-y-4">
@@ -171,7 +171,7 @@ const Features = () => {
                     {activeIndex === 2 && (
                       <div className="animate-scale-in h-full flex flex-col">
                         <div className="text-center mb-6">
-                          <h5 className="text-lg font-bold">Event Planning</h5>
+                          <h5 className="text-lg font-bold p-2">Event Planning</h5>
                           <p className="text-sm text-foreground/70">Organize hangouts seamlessly</p>
                         </div>
                         <div className="space-y-4">
@@ -210,7 +210,7 @@ const Features = () => {
                     {activeIndex === 3 && (
                       <div className="animate-scale-in h-full flex flex-col">
                         <div className="text-center mb-6">
-                          <h5 className="text-lg font-bold">Private Space</h5>
+                          <h5 className="text-lg font-bold p-2">Private Space</h5>
                           <p className="text-sm text-foreground/70">No ads, no noise, just friends</p>
                         </div>
                         <div className="flex-1 flex flex-col items-center justify-center text-center space-y-4">
