@@ -1,0 +1,156 @@
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { CheckCircle, Rocket, ArrowLeft, Star, Heart, Users } from 'lucide-react';
+import { useAnalytics } from '@/hooks/useAnalytics';
+
+const EmailValidation = () => {
+  const [searchParams] = useSearchParams();
+  const [isValidated, setIsValidated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const { trackButtonClick, trackEmailValidation } = useAnalytics();
+
+  useEffect(() => {
+    // Simulate validation process
+    const token = searchParams.get('token');
+    const userId = searchParams.get('user');
+
+    // Simulate API call to validate token
+    setTimeout(() => {
+      if (token && userId) {
+        setIsValidated(true);
+        setIsLoading(false);
+        trackEmailValidation();
+      } else {
+        setError('Invalid or expired validation link');
+        setIsLoading(false);
+      }
+    }, 1500);
+  }, [searchParams]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-planety-indigo/5 to-planety-amber/5 flex items-center justify-center">
+        <div className="text-center">
+          <div className="relative w-24 h-24 mx-auto mb-6">
+            {/* Animated constellation */}
+            <div className="absolute inset-0">
+              <div className="w-6 h-6 bg-planety-indigo rounded-full absolute top-0 left-1/2 -translate-x-1/2 animate-pulse"></div>
+              <div className="w-4 h-4 bg-planety-amber rounded-full absolute bottom-0 left-0 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+              <div className="w-5 h-5 bg-planety-green rounded-full absolute bottom-0 right-0 animate-pulse" style={{animationDelay: '1s'}}></div>
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 96 96">
+                <path d="M48 12 L12 84" stroke="#6366F1" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="3,3"/>
+                <path d="M48 12 L84 84" stroke="#F59E0B" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="3,3"/>
+                <path d="M12 84 L84 84" stroke="#10B981" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="3,3"/>
+              </svg>
+            </div>
+          </div>
+          <h2 className="text-2xl font-display font-semibold text-planety-navy mb-2">
+            Validating Your Email
+          </h2>
+          <p className="text-planety-gray-600">
+            Preparing your friendship galaxy...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-planety-red/5 to-planety-orange/5 flex items-center justify-center">
+        <div className="text-center max-w-md mx-auto px-4">
+          <div className="w-16 h-16 bg-planety-red/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-8 h-8 text-planety-red" />
+          </div>
+          <h2 className="text-2xl font-display font-semibold text-planety-navy mb-4">
+            Validation Error
+          </h2>
+          <p className="text-planety-gray-600 mb-8">
+            {error}. Please check your email for a new validation link or contact support.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/"
+              className="button-secondary flex items-center justify-center"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </a>
+            <button className="button-primary">
+              Contact Support
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-planety-indigo/5 to-planety-amber/5 flex items-center justify-center">
+      <div className="text-center max-w-md mx-auto px-4">
+        {/* Success animation */}
+        <div className="relative w-32 h-32 mx-auto mb-8">
+          {/* Central success icon */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-planety-green rounded-full flex items-center justify-center shadow-lg animate-scale-in">
+            <CheckCircle className="w-8 h-8 text-white" />
+          </div>
+          
+          {/* Orbiting planets */}
+          <div className="absolute top-4 right-8 w-6 h-6 bg-planety-amber rounded-full flex items-center justify-center animate-float" style={{animationDelay: '0.5s'}}>
+            <Star className="w-3 h-3 text-white" />
+          </div>
+          <div className="absolute bottom-4 left-8 w-8 h-8 bg-planety-indigo rounded-full flex items-center justify-center animate-float" style={{animationDelay: '1s'}}>
+            <Heart className="w-4 h-4 text-white" />
+          </div>
+          <div className="absolute bottom-4 right-4 w-5 h-5 bg-planety-green rounded-full flex items-center justify-center animate-float" style={{animationDelay: '1.5s'}}>
+            <Users className="w-3 h-3 text-white" />
+          </div>
+          
+          {/* Sparkle effects */}
+          <div className="absolute top-0 left-0 w-2 h-2 bg-planety-amber rounded-full animate-pulse-soft"></div>
+          <div className="absolute top-8 left-0 w-1 h-1 bg-planety-indigo rounded-full animate-pulse-soft" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-0 right-0 w-2 h-2 bg-planety-green rounded-full animate-pulse-soft" style={{animationDelay: '2s'}}></div>
+        </div>
+
+        {/* Success content */}
+        <h1 className="text-3xl md:text-4xl font-display font-semibold text-planety-navy mb-4">
+          Email Validated! ✨
+        </h1>
+        <h2 className="text-xl font-display font-medium text-planety-indigo mb-4">
+          Welcome to Your Friendship Galaxy
+        </h2>
+        <p className="text-planety-gray-600 mb-8 leading-relaxed">
+          Your email has been confirmed. You're ready to start your friendship journey and transform how you maintain meaningful relationships.
+        </p>
+
+        {/* Action buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <button 
+            className="button-primary flex items-center justify-center"
+            onClick={() => trackButtonClick('Continue to App', 'email_validation', 'app_redirect')}
+          >
+            <Rocket className="w-5 h-5 mr-2" />
+            Continue to App
+          </button>
+          <a
+            href="/"
+            className="button-secondary flex items-center justify-center"
+            onClick={() => trackButtonClick('Learn More', 'email_validation', '/')}
+          >
+            Learn More
+          </a>
+        </div>
+
+        {/* Trust indicator */}
+        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 border border-planety-indigo/10">
+          <p className="text-sm text-planety-gray-600">
+            🔒 Your friendship data is secure and private. Ready to explore your cosmic connections?
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default EmailValidation;

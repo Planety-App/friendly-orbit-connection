@@ -87,12 +87,39 @@ const Navbar = () => {
     scrollToSection('cta-section');
   };
 
+  const [showAnnounce, setShowAnnounce] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('planety_announce_dismissed') !== 'true';
+    } catch {
+      return true;
+    }
+  });
+
+  const dismissAnnounce = () => {
+    setShowAnnounce(false);
+    try { localStorage.setItem('planety_announce_dismissed', 'true'); } catch {}
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'py-2 sm:py-3 bg-background/80 backdrop-blur-lg shadow-sm' : 'py-3 sm:py-5'
       }`}
     >
+      {showAnnounce && (
+        <div className="relative bg-gradient-to-r from-planety-indigo/10 to-planety-amber/10 border-b border-planety-indigo/20">
+          <div className="container px-4 mx-auto py-2 text-center text-xs sm:text-sm text-planety-navy">
+            <span className="font-medium">Early Access:</span> Join the waitlist today and get exclusive launch rewards!
+            <button 
+              onClick={dismissAnnounce}
+              aria-label="Dismiss announcement"
+              className="absolute right-2 top-1/2 -translate-y-1/2 px-2 py-1 text-planety-indigo hover:text-planety-navy"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -105,27 +132,27 @@ const Navbar = () => {
               setIsMenuOpen(false);
             }}
           >
-            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-space-purple flex items-center justify-center transition-all duration-300 ${isScrolled ? 'scale-90' : ''}`}>
+            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-planety-indigo flex items-center justify-center transition-all duration-300 ${isScrolled ? 'scale-90' : ''}`}>
               <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </div>
             <h1 className="text-lg sm:text-xl font-bold">Planety</h1>
           </a>
           
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          <nav aria-label="Primary" className="hidden md:flex items-center gap-6 lg:gap-8">
             <a 
-              href="#features" 
-              className="text-sm lg:text-base font-medium hover:text-space-purple transition-colors"
+              href="#features-section" 
+              className="text-sm lg:text-base font-medium hover:text-planety-indigo transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('features');
+                scrollToSection('features-section');
               }}
             >
               Features
             </a>
             <a 
               href="#how-it-works" 
-              className="text-sm lg:text-base font-medium hover:text-space-purple transition-colors"
+              className="text-sm lg:text-base font-medium hover:text-planety-indigo transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('how-it-works');
@@ -135,7 +162,7 @@ const Navbar = () => {
             </a>
             <a 
               href="#testimonials" 
-              className="text-sm lg:text-base font-medium hover:text-space-purple transition-colors"
+              className="text-sm lg:text-base font-medium hover:text-planety-indigo transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('testimonials');
@@ -145,7 +172,7 @@ const Navbar = () => {
             </a>
             <a 
               href="#cta-section" 
-              className="text-sm lg:text-base font-medium hover:text-space-purple transition-colors"
+              className="text-sm lg:text-base font-medium hover:text-planety-indigo transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('cta-section');
@@ -205,6 +232,8 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-muted/70 flex items-center justify-center transition-colors hover:bg-muted"
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? (
                 <X className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -218,25 +247,26 @@ const Navbar = () => {
       
       {/* Mobile menu */}
       <div 
+        id="mobile-menu"
         className={`md:hidden absolute top-full left-0 right-0 bg-background border-b border-border transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-screen py-3 sm:py-4 shadow-md' : 'max-h-0 py-0'
         }`}
       >
         <div className="container px-4 mx-auto">
-          <nav className="flex flex-col gap-3 sm:gap-4">
+          <nav aria-label="Mobile" className="flex flex-col gap-3 sm:gap-4">
             <a 
-              href="#features" 
-              className="font-medium py-1.5 sm:py-2 hover:text-space-purple transition-colors text-sm sm:text-base"
+              href="#features-section" 
+              className="font-medium py-1.5 sm:py-2 hover:text-planety-indigo transition-colors text-sm sm:text-base"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('features');
+                scrollToSection('features-section');
               }}
             >
               Features
             </a>
             <a 
               href="#how-it-works" 
-              className="font-medium py-1.5 sm:py-2 hover:text-space-purple transition-colors text-sm sm:text-base"
+              className="font-medium py-1.5 sm:py-2 hover:text-planety-indigo transition-colors text-sm sm:text-base"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('how-it-works');
@@ -246,7 +276,7 @@ const Navbar = () => {
             </a>
             <a 
               href="#testimonials" 
-              className="font-medium py-1.5 sm:py-2 hover:text-space-purple transition-colors text-sm sm:text-base"
+              className="font-medium py-1.5 sm:py-2 hover:text-planety-indigo transition-colors text-sm sm:text-base"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('testimonials');
@@ -256,7 +286,7 @@ const Navbar = () => {
             </a>
             <a 
               href="#cta-section" 
-              className="font-medium py-1.5 sm:py-2 hover:text-space-purple transition-colors text-sm sm:text-base"
+              className="font-medium py-1.5 sm:py-2 hover:text-planety-indigo transition-colors text-sm sm:text-base"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('cta-section');

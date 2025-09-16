@@ -21,7 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['Outfit', 'sans-serif'],
+				display: ['Poppins', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -67,6 +67,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Planety Brand Colors - Deep Space Blue Theme
+				planety: {
+					navy: '#1E293B', // Primary - Navigation, headers, primary buttons
+					indigo: '#6366F1', // Secondary - Links, active states, secondary actions
+					amber: '#F59E0B', // Accent - Call-to-action, achievements, highlights
+					green: '#10B981', // Success - Positive confirmations
+					orange: '#F97316', // Warning - Reminders, gentle nudges
+					red: '#EF4444', // Error - Errors, critical actions
+					// Neutral Foundation
+					white: '#FFFFFF', // Main page background
+					gray: {
+						50: '#F8FAFC', // Card backgrounds, elevated surfaces
+						200: '#E2E8F0', // Subtle borders, dividers
+						600: '#64748B', // Supporting text, captions
+						700: '#1E293B', // Main content, headers (same as navy)
+						400: '#94A3B8', // Placeholder text, disabled states
+					}
+				},
+				// Legacy space colors for backward compatibility
 				space: {
 					purple: {
 						light: '#9b87f5',

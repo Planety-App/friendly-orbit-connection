@@ -3,25 +3,28 @@ import { Heart, Star, Circle } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Planety has completely changed how I keep up with friends. The missions make reaching out feel natural instead of awkward.",
-    name: "Alex Kim",
-    role: "Busy Professional",
-    avatar: "/placeholder.svg",
-    color: "from-space-purple/20 to-space-purple-light/20"
+    quote: "I finally have a system to stay in touch with friends despite my busy work schedule. The reminders actually work.",
+    name: "Sophia Chen",
+    role: "Marketing Director",
+    avatar: "/earth-P.svg",
+    color: "from-planety-indigo/20 to-planety-navy/20",
+    persona: "Social Sophia"
   },
   {
-    quote: "As someone with social anxiety, I love how Planety helps me maintain friendships without the pressure of social media.",
-    name: "Jamie Taylor",
-    role: "Introvert & Artist",
-    avatar: "/placeholder.svg",
-    color: "from-space-blue/20 to-space-blue-light/20"
+    quote: "Keeping up with college friends is so much easier now. I don't have to worry about forgetting to reach out anymore.",
+    name: "Tom Rodriguez",
+    role: "Software Developer", 
+    avatar: "/mars-P.svg",
+    color: "from-planety-amber/20 to-planety-orange/20",
+    persona: "Thoughtful Tom"
   },
   {
-    quote: "Moving to a new city was tough, but Planety helped me stay connected to old friends while making space for new ones.",
-    name: "Morgan Lee",
-    role: "Recent Graduate",
-    avatar: "/placeholder.svg",
-    color: "from-space-orange/20 to-space-orange-light/20"
+    quote: "Planety helps me remember to check in with all my friends, not just the ones who text me first. It's been a game-changer.",
+    name: "Carla Williams",
+    role: "Event Coordinator",
+    avatar: "/venus-P.svg",
+    color: "from-planety-green/20 to-planety-indigo/20",
+    persona: "Connected Carla"
   }
 ];
 
@@ -35,21 +38,21 @@ type FriendshipType = {
 const friendshipTypes: FriendshipType[] = [
   {
     title: "Close Friends",
-    description: "Your inner circle who know you best",
+    description: "Your inner circle who know you best and support you through everything",
     icon: <Heart className="w-6 h-6 text-white" />,
-    color: "bg-space-purple"
+    color: "bg-planety-indigo"
   },
   {
-    title: "Activity Buddies",
-    description: "Friends you share hobbies with",
+    title: "Activity Buddies", 
+    description: "Friends you share hobbies, interests, and adventures with",
     icon: <Star className="w-6 h-6 text-white" />,
-    color: "bg-space-blue"
+    color: "bg-planety-amber"
   },
   {
     title: "Growing Connections",
-    description: "Newer friendships with potential",
+    description: "Newer friendships with potential for deeper bonds",
     icon: <Circle className="w-6 h-6 text-white" />,
-    color: "bg-space-orange"
+    color: "bg-planety-green"
   }
 ];
 
@@ -65,22 +68,22 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 relative">
+    <section id="testimonials" className="py-8 sm:py-10 lg:py-12 relative">
       {/* Background decoration */}
-      <div className="absolute -z-10 top-1/3 left-0 w-64 h-64 rounded-full bg-space-orange/5 blur-3xl"></div>
-      <div className="absolute -z-10 bottom-1/3 right-0 w-64 h-64 rounded-full bg-space-purple/5 blur-3xl"></div>
+      <div className="absolute -z-10 top-1/3 left-0 w-64 h-64 rounded-full bg-planety-amber/5 blur-3xl"></div>
+      <div className="absolute -z-10 bottom-1/3 right-0 w-64 h-64 rounded-full bg-planety-indigo/5 blur-3xl"></div>
       
       <div className="container px-4 mx-auto">
-        <div className="text-center mb-6 sm:mb-8 max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-            What Our Early Users Say
+        <div className="text-center mb-4 sm:mb-6 max-w-3xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-2 sm:mb-3 text-planety-navy">
+            What People Say About Planety
           </h2>
-          <p className="text-base sm:text-lg text-foreground/80">
-            Real stories from people who've transformed how they maintain friendships.
+          <p className="text-sm sm:text-base text-planety-gray-600">
+            Real stories from people who've improved their friendships using Planety.
           </p>
         </div>
         
-        <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-10 items-center">
           {/* Testimonial slider */}
           <div className="lg:w-1/2 order-2 lg:order-1 w-full">
             <div className="relative h-[250px] sm:h-[300px] w-full max-w-sm sm:max-w-lg mx-auto">
@@ -97,22 +100,22 @@ const Testimonials = () => {
                 >
                   <div className="mb-4 sm:mb-6">
                     {/* Quote icon */}
-                    <svg className="w-8 sm:w-10 h-8 sm:h-10 text-space-purple/30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.7,15.8L2,7.8C1.7,7.5,1.7,7,2,6.7s0.8-0.3,1.1,0l8.8,8.1c0.3,0.3,0.3,0.8,0,1.1L3.1,23.8c-0.3,0.3-0.8,0.3-1.1,0 s-0.3-0.8,0-1.1L10.7,15.8z M21.9,15.8l-8.8-8.1c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l8.8,8.1c0.3,0.3,0.3,0.8,0,1.1l-8.8,8.1 c-0.3,0.3-0.8,0.3-1.1,0s-0.3-0.8,0-1.1L21.9,15.8z"></path>
+                    <svg className="w-8 sm:w-10 h-8 sm:h-10 text-planety-indigo/30" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.352,4C4.456,4,0.496,8.016,0.496,12.912c0,4.904,3.96,8.912,8.856,8.912c0.328,0,0.664-0.024,0.992-0.072V24c0,0.336,0.136,0.664,0.368,0.896c0.472,0.472,1.232,0.472,1.704,0c0.232-0.232,0.368-0.56,0.368-0.896v-2.24c0.768-0.32,1.464-0.816,2.024-1.456c1.136-1.296,1.656-2.984,1.432-4.64c-0.216-1.552-1.016-2.928-2.216-3.824c-0.568-0.424-1.24-0.656-1.936-0.656c-0.592,0-1.184,0.184-1.688,0.536c-0.12,0.088-0.224,0.192-0.312,0.312c-0.416,0.568-0.64,1.256-0.64,1.968c0,0.896,0.32,1.744,0.896,2.384c0.264,0.296,0.664,0.472,1.072,0.472c0.336,0,0.664-0.136,0.896-0.368c0.232-0.232,0.368-0.56,0.368-0.896s-0.136-0.664-0.368-0.896C8.984,15.904,8.648,15.768,8.312,15.768c-0.184,0-0.368,0.032-0.536,0.096c0.024-0.184,0.088-0.368,0.184-0.528c0.424-0.712,1.304-0.936,2.016-0.512c0.712,0.424,0.936,1.304,0.512,2.016c-0.424,0.712-1.304,0.936-2.016,0.512c-0.712-0.424-0.936-1.304-0.512-2.016C8.384,14.624,8.832,14.4,9.352,14.4z M22.048,4c-4.896,0-8.856,4.016-8.856,8.912c0,4.904,3.96,8.912,8.856,8.912c0.328,0,0.664-0.024,0.992-0.072V24c0,0.336,0.136,0.664,0.368,0.896c0.472,0.472,1.232,0.472,1.704,0c0.232-0.232,0.368-0.56,0.368-0.896v-2.24c0.768-0.32,1.464-0.816,2.024-1.456c1.136-1.296,1.656-2.984,1.432-4.64c-0.216-1.552-1.016-2.928-2.216-3.824c-0.568-0.424-1.24-0.656-1.936-0.656c-0.592,0-1.184,0.184-1.688,0.536c-0.12,0.088-0.224,0.192-0.312,0.312c-0.416,0.568-0.64,1.256-0.64,1.968c0,0.896,0.32,1.744,0.896,2.384c0.264,0.296,0.664,0.472,1.072,0.472c0.336,0,0.664-0.136,0.896-0.368c0.232-0.232,0.368-0.56,0.368-0.896s-0.136-0.664-0.368-0.896c-0.232-0.232-0.568-0.368-0.904-0.368c-0.184,0-0.368,0.032-0.536,0.096c0.024-0.184,0.088-0.368,0.184-0.528c0.424-0.712,1.304-0.936,2.016-0.512c0.712,0.424,0.936,1.304,0.512,2.016c-0.424,0.712-1.304,0.936-2.016,0.512c-0.712-0.424-0.936-1.304-0.512-2.016C21.08,14.624,21.528,14.4,22.048,14.4z"></path>
                     </svg>
                   </div>
                   
-                  <p className="text-base sm:text-lg font-medium italic mb-4 sm:mb-6">
-                    {testimonial.quote}
+                  <p className="text-base sm:text-lg font-medium italic mb-4 sm:mb-6 text-planety-navy">
+                    "{testimonial.quote}"
                   </p>
                   
                   <div className="flex items-center">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden mr-3 sm:mr-4 ring-2 ring-white/20">
-                      <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden mr-3 sm:mr-4 ring-2 ring-planety-indigo/20">
+                      <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-base sm:text-lg">{testimonial.name}</h4>
-                      <p className="text-sm text-foreground/70">{testimonial.role}</p>
+                      <h4 className="font-display font-medium text-base sm:text-lg text-planety-navy">{testimonial.name}</h4>
+                      <p className="text-sm text-planety-gray-600">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>
@@ -126,7 +129,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? 'bg-space-purple scale-125' : 'bg-foreground/20 hover:bg-foreground/40'
+                    index === activeIndex ? 'bg-planety-indigo scale-125' : 'bg-planety-gray-400 hover:bg-planety-gray-600'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -147,20 +150,20 @@ const Testimonials = () => {
                     {type.icon}
                   </div>
                   <div>
-                    <h4 className="font-bold text-base sm:text-lg mb-1">{type.title}</h4>
-                    <p className="text-sm sm:text-base text-foreground/80">{type.description}</p>
+                    <h4 className="font-display font-medium text-base sm:text-lg mb-1 text-planety-navy">{type.title}</h4>
+                    <p className="text-sm sm:text-base text-planety-gray-600">{type.description}</p>
                   </div>
                 </div>
               ))}
             </div>
             
-            <div className="mt-6 sm:mt-8 p-4 sm:p-6 glass-card bg-gradient-to-br from-space-purple/10 to-space-blue/10 text-center hover:shadow-glow-sm transition-all duration-300">
-              <p className="text-sm sm:text-base text-foreground/80 mb-3 sm:mb-4">
-                Planety adapts to your unique friendship patterns, helping you nurture each relationship in the way it needs.
+            <div className="mt-6 sm:mt-8 p-4 sm:p-6 glass-card bg-gradient-to-br from-planety-indigo/10 to-planety-amber/10 text-center hover:shadow-glow-sm transition-all duration-300 border border-planety-indigo/20">
+              <p className="text-sm sm:text-base text-planety-gray-600 mb-3 sm:mb-4">
+                Planety learns your friendship patterns and helps you maintain better relationships with less effort.
               </p>
-              <div className="inline-flex items-center text-space-purple font-medium text-sm sm:text-base">
-                <Circle className="w-3.5 sm:w-4 h-3.5 sm:h-4 mr-2 fill-current animate-pulse-soft" />
-                <span>Coming soon: Friendship Insights</span>
+              <div className="inline-flex items-center text-planety-indigo font-medium text-sm sm:text-base">
+                <Star className="w-3.5 sm:w-4 h-3.5 sm:h-4 mr-2 fill-current animate-pulse-soft" />
+                <span>Join 10,000+ people staying better connected</span>
               </div>
             </div>
           </div>
