@@ -13,7 +13,7 @@ const CTASection = () => {
     form_type: 'waitlist_signup'
   });
   return (
-    <section ref={ctaRef} id="cta-section" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+    <section ref={ctaRef} id="cta-section" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden scroll-mt-24">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/6 w-40 sm:w-64 h-40 sm:h-64 rounded-full bg-planety-indigo/10 blur-3xl animate-pulse-slow"></div>
@@ -33,11 +33,11 @@ const CTASection = () => {
             <Star className="w-4 sm:w-5 h-4 sm:h-5" />
           </div>
           
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-semibold tracking-tight mb-3 sm:mb-4 text-planety-navy">
               Ready to Transform Your <span className="text-planety-indigo">Friendships</span>?
             </h2>
-            <p className="text-base sm:text-lg text-foreground/80 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-planety-gray-600 max-w-2xl mx-auto">
               Join our waitlist to be among the first to experience Planety when we launch. We'll send you updates and early access opportunities.
             </p>
             

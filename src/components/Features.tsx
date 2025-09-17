@@ -74,7 +74,7 @@ const Features = () => {
   }, [isVisible]);
 
   return (
-    <section id="features-section" className="py-10 lg:py-14 bg-muted/50">
+    <section id="features-section" className="py-10 sm:py-12 lg:py-14 bg-muted/50 scroll-mt-24">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-8 max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-planety-navy">
@@ -87,11 +87,11 @@ const Features = () => {
         
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           {/* Feature cards - Left side on desktop, top on mobile */}
-          <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className={`glass-card p-6 transition-all duration-500 cursor-pointer ${activeIndex === index ? 'scale-105 shadow-glow-sm border-2 border-planety-indigo/30' : 'hover:scale-105 border border-planety-gray-200'}`}
+                className={`glass-card p-6 transition-all duration-500 ease-out cursor-pointer ${activeIndex === index ? 'shadow-glow-sm border border-planety-indigo/30' : 'hover:shadow-glow-sm border border-planety-gray-200/70 hover:border-planety-indigo/20'}`}
                 onClick={() => setActiveIndex(index)}
               >
                 <div className={`w-16 h-16 rounded-full ${feature.bgColor} flex items-center justify-center mb-4 ${feature.color} ${feature.borderColor} border`}>
@@ -106,7 +106,8 @@ const Features = () => {
             ))}
           </div>
           
-          {/* App preview removed for simplified layout */}
+          {/* Spacer for balance on large screens */}
+          <div className="hidden lg:block lg:w-1/3" />
         </div>
       </div>
     </section>

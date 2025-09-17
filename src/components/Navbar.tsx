@@ -103,7 +103,7 @@ const Navbar = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'py-2 sm:py-3 bg-background/80 backdrop-blur-lg shadow-sm' : 'py-3 sm:py-5'
+        isScrolled ? 'py-2 sm:py-3 bg-background/80 backdrop-blur-md shadow-sm' : 'py-3 sm:py-5'
       }`}
     >
       {showAnnounce && (
