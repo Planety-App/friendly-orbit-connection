@@ -152,26 +152,6 @@ const Navbar = () => {
               Features
             </a>
             <a 
-              href="#how-it-works" 
-              className="text-sm lg:text-base font-medium hover:text-planety-indigo transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('how-it-works');
-              }}
-            >
-              How It Works
-            </a>
-            <a 
-              href="#testimonials" 
-              className="text-sm lg:text-base font-medium hover:text-planety-indigo transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('testimonials');
-              }}
-            >
-              Testimonials
-            </a>
-            <a 
               href="#cta-section" 
               className="text-sm lg:text-base font-medium hover:text-planety-indigo transition-colors"
               onClick={(e) => {
@@ -264,26 +244,6 @@ const Navbar = () => {
               }}
             >
               Features
-            </a>
-            <a 
-              href="#how-it-works" 
-              className="font-medium py-1.5 sm:py-2 hover:text-planety-indigo transition-colors text-sm sm:text-base"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('how-it-works');
-              }}
-            >
-              How It Works
-            </a>
-            <a 
-              href="#testimonials" 
-              className="font-medium py-1.5 sm:py-2 hover:text-planety-indigo transition-colors text-sm sm:text-base"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('testimonials');
-              }}
-            >
-              Testimonials
             </a>
             <a 
               href="#cta-section" 

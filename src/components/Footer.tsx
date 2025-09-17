@@ -41,21 +41,13 @@ const Footer = () => {
           </div>
           
           {/* Links */}
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             <div>
               <h4 className="font-display font-medium mb-2 text-sm text-planety-navy">Features</h4>
               <ul className="space-y-1">
                 <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Friend Dashboard</a></li>
                 <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Smart Reminders</a></li>
                 <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Conversation Tracker</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-display font-medium mb-2 text-sm text-planety-navy">Resources</h4>
-              <ul className="space-y-1">
-                <li><a href="mailto:app.planety@gmail.com?subject=Friendship Guide Request" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Friendship Guide</a></li>
-                <li><a href="mailto:app.planety@gmail.com?subject=Community" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Community</a></li>
-                <li><a href="mailto:app.planety@gmail.com?subject=Support Request" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Support</a></li>
               </ul>
             </div>
             <div>

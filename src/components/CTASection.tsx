@@ -40,33 +40,7 @@ const CTASection = () => {
             <p className="text-base sm:text-lg text-foreground/80 max-w-2xl mx-auto">
               Join our waitlist to be among the first to experience Planety when we launch. We'll send you updates and early access opportunities.
             </p>
-            <div className="mt-4 flex items-center justify-center gap-2">
-              <button
-                className="button-secondary flex items-center"
-                onClick={async () => {
-                  const url = window.location.origin;
-                  try {
-                    await navigator.clipboard.writeText(`${url}?ref=friend`);
-                    trackEvent('referral_link_copied');
-                  } catch {}
-                }}
-                aria-label="Copy referral link"
-              >
-                <Copy className="w-4 h-4 mr-2" /> Copy referral link
-              </button>
-              <button
-                className="button-secondary flex items-center"
-                onClick={() => {
-                  const text = encodeURIComponent('Join me on Planety — a better way to keep up with friends!');
-                  const shareUrl = encodeURIComponent(window.location.origin);
-                  window.open(`https://twitter.com/intent/tweet?text=${text}&url=${shareUrl}`, '_blank');
-                  trackEvent('share_clicked', { network: 'twitter' });
-                }}
-                aria-label="Share on X"
-              >
-                <Share2 className="w-4 h-4 mr-2" /> Share
-              </button>
-            </div>
+            
           </div>
           
           <div className="flex justify-center">
