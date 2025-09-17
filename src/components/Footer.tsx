@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="text-lg font-display font-semibold text-planety-navy">Planety</span>
             </div>
             <p className="text-sm text-planety-gray-600 max-w-md">
-              Never lose touch with friends again. Simple reminders and tracking for better relationships.
+              Keep your friendships strong and organized. Never lose touch with the people who matter most to you.
             </p>
           </div>
           
@@ -27,9 +27,9 @@ const Footer = () => {
             <div>
               <h4 className="font-display font-medium mb-2 text-sm text-planety-navy">Features</h4>
               <ul className="space-y-1">
-                <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Friend Dashboard</a></li>
+                <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Friend Organization</a></li>
                 <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Smart Reminders</a></li>
-                <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Conversation Tracker</a></li>
+                <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Conversation Notes</a></li>
               </ul>
             </div>
             <div>

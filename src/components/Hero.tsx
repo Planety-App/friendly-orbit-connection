@@ -65,12 +65,12 @@ const Hero = () => {
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-semibold mb-2 sm:mb-3 tracking-tight leading-tight text-planety-navy">
-              Never Lose Touch With
-              <span className="block text-planety-indigo">Friends Again</span>
+              Keep your friendships
+              <span className="block text-planety-indigo">strong and organized</span>
             </h1>
             
             <p className="text-sm sm:text-base md:text-lg text-planety-gray-600 mb-4 sm:mb-6 max-w-md md:max-w-lg mx-auto lg:mx-0">
-              Get reminders to check in, track your conversations, and maintain friendships without the overwhelm of social media.
+              Never lose touch with the people who matter most to you
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start relative z-30">
@@ -83,7 +83,7 @@ const Hero = () => {
                 }}
               >
                 <Rocket className="w-5 h-5 mr-2" />
-                Try Planety Free
+                Get Started
               </button>
               <button 
                 className="button-secondary"

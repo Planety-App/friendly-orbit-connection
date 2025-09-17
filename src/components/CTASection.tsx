@@ -35,7 +35,7 @@ const CTASection = () => {
           
           <div className="text-center mb-6 sm:mb-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-semibold tracking-tight mb-3 sm:mb-4 text-planety-navy">
-              Ready to Transform Your <span className="text-planety-indigo">Friendships</span>?
+              Never Miss <span className="text-planety-indigo">Important Moments</span>
             </h2>
             <p className="text-base sm:text-lg text-planety-gray-600 max-w-xl mx-auto">
               Join the waitlist—get early access and start nurturing better friendships.

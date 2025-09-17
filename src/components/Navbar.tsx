@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Heart, Menu, X, Moon, Sun } from 'lucide-react';
-
-type Theme = 'light' | 'dark' | 'system';
+import { Heart, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<Theme>('system');
   
   useEffect(() => {
     const handleScroll = () => {
@@ -15,51 +12,10 @@ const Navbar = () => {
     
     window.addEventListener('scroll', handleScroll);
     
-    // Initialize theme
-    const savedTheme = localStorage.getItem('theme') as Theme || 'system';
-    setTheme(savedTheme);
-    
-    // Apply the theme
-    const applyTheme = (newTheme: Theme) => {
-      const htmlElement = document.documentElement;
-      
-      if (newTheme === 'dark' || (newTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        htmlElement.classList.add('dark');
-      } else {
-        htmlElement.classList.remove('dark');
-      }
-    };
-    
-    applyTheme(savedTheme);
-    
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      if (theme === 'system') {
-        applyTheme('system');
-      }
-    };
-    
-    mediaQuery.addEventListener('change', handleChange);
-    
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      mediaQuery.removeEventListener('change', handleChange);
     };
-  }, [theme]);
-  
-  const toggleTheme = () => {
-    const newTheme: Theme = theme === 'light' ? 'dark' : theme === 'dark' ? 'system' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Apply the theme
-    if (newTheme === 'dark' || (newTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  };
+  }, []);
 
   // Function to handle smooth scrolling to sections
   const scrollToSection = (sectionId: string) => {
@@ -165,22 +121,6 @@ const Navbar = () => {
           
           {/* Desktop actions */}
           <div className="hidden md:flex items-center gap-3 lg:gap-4">
-            <button 
-              onClick={toggleTheme}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-muted/70 flex items-center justify-center transition-colors hover:bg-muted"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? (
-                <Sun className="w-4 h-4 sm:w-5 sm:h-5" />
-              ) : theme === 'dark' ? (
-                <Moon className="w-4 h-4 sm:w-5 sm:h-5" />
-              ) : (
-                <div className="relative">
-                  <Sun className="w-4 h-4 sm:w-5 sm:h-5 absolute opacity-0 animate-pulse" />
-                  <Moon className="w-4 h-4 sm:w-5 sm:h-5" />
-                </div>
-              )}
-            </button>
             
             <button 
               className="button-primary text-sm lg:text-base"
@@ -192,22 +132,6 @@ const Navbar = () => {
           
           {/* Mobile menu button */}
           <div className="flex md:hidden items-center gap-2 sm:gap-4">
-            <button 
-              onClick={toggleTheme}
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-muted/70 flex items-center justify-center transition-colors hover:bg-muted"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? (
-                <Sun className="w-4 h-4 sm:w-5 sm:h-5" />
-              ) : theme === 'dark' ? (
-                <Moon className="w-4 h-4 sm:w-5 sm:h-5" />
-              ) : (
-                <div className="relative">
-                  <Sun className="w-4 h-4 sm:w-5 sm:h-5 absolute opacity-0 animate-pulse" />
-                  <Moon className="w-4 h-4 sm:w-5 sm:h-5" />
-                </div>
-              )}
-            </button>
             
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}

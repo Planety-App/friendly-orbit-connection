@@ -4,24 +4,24 @@ import { Users, Heart, Star, Bell } from 'lucide-react';
 const features = [
   {
     icon: <Users className="w-8 h-8" />,
-    title: "Friend Dashboard",
-    description: "See who needs a check‑in at a glance.",
+    title: "Best friends",
+    description: "Your closest companions who share deep emotional bonds",
     color: "text-planety-indigo",
     bgColor: "bg-planety-indigo/10",
     borderColor: "border-planety-indigo/20"
   },
   {
     icon: <Bell className="w-8 h-8" />,
-    title: "Smart Reminders",
-    description: "Gentle nudges based on your rhythm.",
+    title: "Family members",
+    description: "Relatives and family connections that matter most",
     color: "text-planety-amber",
     bgColor: "bg-planety-amber/10",
     borderColor: "border-planety-amber/20"
   },
   {
     icon: <Heart className="w-8 h-8" />,
-    title: "Conversation Notes",
-    description: "Remember what matters to each person.",
+    title: "Work colleagues",
+    description: "Professional relationships and workplace connections",
     color: "text-planety-green",
     bgColor: "bg-planety-green/10",
     borderColor: "border-planety-green/20"
@@ -35,10 +35,10 @@ const Features = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-8 max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-planety-navy">
-            How Planety Helps You <span className="text-planety-indigo">Stay Connected</span>
+            Group Your Friends <span className="text-planety-indigo">Your Way</span>
           </h2>
           <p className="text-base text-planety-gray-600">
-            Simple tools to help you remember, track, and maintain your most important friendships.
+            Organize your friendships with our cosmic planet system - from best friends to work colleagues.
           </p>
         </div>
         
