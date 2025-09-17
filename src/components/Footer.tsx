@@ -6,25 +6,7 @@ const Footer = () => {
   return (
     <footer className="py-6 relative overflow-hidden bg-planety-gray-50">
       <div className="container px-4 mx-auto">
-        {/* Newsletter signup */}
-        <div className="text-center mb-6 pb-6 border-b border-planety-gray-200 px-4">
-          <h3 className="text-lg font-display font-medium text-planety-navy mb-2">
-            Get friendship tips in your inbox
-          </h3>
-          <p className="text-sm text-planety-gray-600 mb-4">
-            Practical advice for maintaining better friendships
-          </p>
-          <div className="flex flex-col sm:flex-row w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto gap-2">
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              className="w-full sm:flex-1 px-3 py-2 text-sm border border-planety-gray-200 rounded-lg focus:outline-none focus:border-planety-indigo"
-            />
-            <button className="w-full sm:w-auto px-4 py-2 bg-planety-indigo text-white rounded-lg text-sm hover:bg-planety-navy transition-colors">
-              <Mail className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
+        {/* Minimal footer */}
 
         <div className="flex flex-col md:flex-row justify-between gap-6 mb-6">
           {/* Logo and description */}

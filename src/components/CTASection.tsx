@@ -37,8 +37,8 @@ const CTASection = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-semibold tracking-tight mb-3 sm:mb-4 text-planety-navy">
               Ready to Transform Your <span className="text-planety-indigo">Friendships</span>?
             </h2>
-            <p className="text-base sm:text-lg text-planety-gray-600 max-w-2xl mx-auto">
-              Join our waitlist to be among the first to experience Planety when we launch. We'll send you updates and early access opportunities.
+            <p className="text-base sm:text-lg text-planety-gray-600 max-w-xl mx-auto">
+              Join the waitlist—get early access and start nurturing better friendships.
             </p>
             
           </div>
