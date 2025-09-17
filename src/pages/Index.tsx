@@ -43,13 +43,13 @@ const Index = () => {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-planety-amber focus:text-planety-navy focus:px-3 focus:py-2 focus:rounded-md">Skip to content</a>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main id="main" className="flex-1" role="main">
+        <main id="main" className="flex-1 pb-24 md:pb-0" role="main">
           <Hero />
           <Features />
           <CTASection />
         </main>
         {/* Sticky mobile CTA */}
-        <div className="fixed bottom-4 inset-x-0 px-4 md:hidden z-40">
+        <div className="fixed bottom-4 inset-x-0 px-4 md:hidden z-40 pb-[env(safe-area-inset-bottom)]">
           <a
             href="#cta-section"
             className="block text-center button-primary shadow-glow-lg"

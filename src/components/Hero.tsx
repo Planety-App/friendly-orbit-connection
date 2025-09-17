@@ -64,12 +64,12 @@ const Hero = () => {
               <span className="text-xs font-medium text-planety-indigo">Join 10,000+ people staying connected with friends</span>
             </div>
             
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-semibold mb-2 sm:mb-3 tracking-tight text-planety-navy">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-semibold mb-2 sm:mb-3 tracking-tight leading-tight text-planety-navy">
               Never Lose Touch With
               <span className="block text-planety-indigo">Friends Again</span>
             </h1>
             
-            <p className="text-sm sm:text-base md:text-lg text-planety-gray-600 mb-4 sm:mb-6 max-w-lg mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base md:text-lg text-planety-gray-600 mb-4 sm:mb-6 max-w-md md:max-w-lg mx-auto lg:mx-0">
               Get reminders to check in, track your conversations, and maintain friendships without the overwhelm of social media.
             </p>
             
