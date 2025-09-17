@@ -45,9 +45,9 @@ const Footer = () => {
             <div>
               <h4 className="font-display font-medium mb-2 text-sm text-planety-navy">Features</h4>
               <ul className="space-y-1">
-                <li><a href="#features" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Friend Dashboard</a></li>
-                <li><a href="#features" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Smart Reminders</a></li>
-                <li><a href="#features" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Conversation Tracker</a></li>
+                <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Friend Dashboard</a></li>
+                <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Smart Reminders</a></li>
+                <li><a href="#features-section" className="text-xs text-planety-gray-600 hover:text-planety-indigo transition-colors">Conversation Tracker</a></li>
               </ul>
             </div>
             <div>

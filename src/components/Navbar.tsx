@@ -124,7 +124,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a 
-            href="#" 
+            href="/" 
             className="flex items-center gap-1.5 sm:gap-2"
             onClick={(e) => {
               e.preventDefault();
