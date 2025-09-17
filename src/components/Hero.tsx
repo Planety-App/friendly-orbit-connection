@@ -58,7 +58,7 @@ const Hero = () => {
       <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8">
           {/* Content */}
-          <div className="lg:w-1/2 text-center lg:text-left animate-slide-up" style={{animationDelay: '0.2s'}}>
+          <div className="lg:w-1/2 text-center lg:text-left animate-slide-up relative z-20" style={{animationDelay: '0.2s'}}>
             <div className="inline-flex items-center px-3 py-1 mb-3 bg-planety-indigo/10 rounded-full">
               <Star className="w-3 h-3 mr-2 text-planety-indigo" />
               <span className="text-xs font-medium text-planety-indigo">Join 10,000+ people staying connected with friends</span>
@@ -73,7 +73,7 @@ const Hero = () => {
               Get reminders to check in, track your conversations, and maintain friendships without the overwhelm of social media.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start relative z-30">
               <button 
                 className="button-primary flex items-center justify-center"
                 onClick={() => {
@@ -111,7 +111,7 @@ const Hero = () => {
           </div>
           
           {/* Friendship Constellation Visual */}
-          <div className="lg:w-1/2 animate-slide-up" style={{animationDelay: '0.4s'}}>
+          <div className="lg:w-1/2 animate-slide-up relative z-10 pointer-events-none lg:pointer-events-auto mt-4 sm:mt-6" style={{animationDelay: '0.4s'}}>
             <div className="relative w-full max-w-lg mx-auto aspect-square">
               {/* Connection lines between planets */}
               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
