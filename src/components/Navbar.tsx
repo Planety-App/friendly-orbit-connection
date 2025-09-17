@@ -108,12 +108,13 @@ const Navbar = () => {
     >
       {showAnnounce && (
         <div className="relative bg-gradient-to-r from-planety-indigo/10 to-planety-amber/10 border-b border-planety-indigo/20">
-          <div className="container px-4 mx-auto py-2 text-center text-xs sm:text-sm text-planety-navy">
-            <span className="font-medium">Early Access:</span> Join the waitlist today and get exclusive launch rewards!
+          <div className="container px-3 sm:px-4 mx-auto py-2 text-center text-xs sm:text-sm text-planety-navy flex items-center gap-2 justify-center">
+            <span className="hidden sm:inline font-medium">Early Access:</span>
+            <span className="truncate">Join the waitlist today and get exclusive launch rewards!</span>
             <button 
               onClick={dismissAnnounce}
               aria-label="Dismiss announcement"
-              className="absolute right-2 top-1/2 -translate-y-1/2 px-2 py-1 text-planety-indigo hover:text-planety-navy"
+              className="ml-auto sm:ml-4 px-2 py-1 text-planety-indigo hover:text-planety-navy"
             >
               ✕
             </button>
