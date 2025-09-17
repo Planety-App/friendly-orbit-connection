@@ -84,6 +84,19 @@ const CTASection = () => {
               Loading…
             </iframe>
           </div>
+
+          {/* Values pledge */}
+          <div className="mt-6 sm:mt-8 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-planety-indigo/20 bg-white/60 backdrop-blur-sm">
+              <span className="text-lg" aria-hidden>🛡️</span>
+              <span className="text-sm text-planety-gray-600">
+                Privacy‑first: your friendship data belongs to you.
+              </span>
+              <a href="/privacy" className="text-sm font-medium text-planety-indigo hover:underline">
+                Read our promise
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       
